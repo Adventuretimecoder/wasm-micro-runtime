@@ -1,9 +1,12 @@
 # Copyright (C) 2021 Intel Corporation and others.  All rights reserved.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
-# Set WAMR's build options
-if (NOT CMAKE_BUILD_EARLY_EXPANSION)
+cmake_minimum_required(VERSION 3.5)
 
+# Project Name
+project(WAMR VERSION 1.0.0)
+
+if (NOT CMAKE_BUILD_EARLY_EXPANSION)
   if (CONFIG_IDF_TARGET_ARCH_RISCV)
       set (WAMR_BUILD_TARGET "RISCV32")
   elseif (CONFIG_IDF_TARGET_ARCH_XTENSA)
